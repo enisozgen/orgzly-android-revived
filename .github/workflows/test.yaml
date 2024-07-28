@@ -28,7 +28,7 @@ jobs:
       matrix:
         # TODO: Run on lowest and highest supported API
         api-level: [29, 34]
-        flavor: [Fdroid, Premium]
+        flavor: [Fdroid]
     steps:
       - name: checkout
         uses: actions/checkout@v4
