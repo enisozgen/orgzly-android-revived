@@ -1,12 +1,24 @@
 name: Build pre-release artifacts and draft Github release
 
 on:
-  # Trigger by pushing a version tag (which are protected)
+  pull_request:
+    branches:
+      - 'master'
+    paths-ignore:
+      - 'README.org'
+      - '.github/**'
+      - 'app/build.gradle'
+      - 'metadata/**'
+      - 'app/src/main/res/layout/dialog_whats_new.xml'
   push:
-    tags:
-      - v*.*.*-*
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches:
+      - 'master'
+    paths-ignore:
+      - 'README.org'
+      - '.github/**'
+      - 'app/build.gradle'
+      - 'metadata/**'
+      - 'app/src/main/res/layout/dialog_whats_new.xml'
   workflow_dispatch:
 
 permissions:
